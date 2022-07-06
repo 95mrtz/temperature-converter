@@ -1,7 +1,7 @@
-const Fahrenheit = () => {
+const Celsius = () => {
   return (
     <svg
-      className="h-8 w-8 text-gray-500"
+      className="h-8 w-8 text-red-500"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -13,10 +13,9 @@ const Fahrenheit = () => {
     >
       {" "}
       <path stroke="none" d="M0 0h24v24H0z" /> <circle cx="6" cy="8" r="2" />{" "}
-      <line x1="13" y1="12" x2="18" y2="12" />{" "}
-      <path d="M20 6h-6a1 1 0 0 0 -1 1v11" />
+      <path d="M20 9a3 3 0 0 0 -3 -3h-1a3 3 0 0 0 -3 3v6a3 3 0 0 0 3 3h1a3 3 0 0 0 3 -3" />
     </svg>
   );
 };
 
-export default Fahrenheit;
+export default Celsius;

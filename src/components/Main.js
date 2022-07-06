@@ -1,18 +1,25 @@
 import Title from "./mainComponents/Title";
-import Form from "./mainComponents/Form.js";
+import FormMain from "./mainComponents/Form.js";
+import Result from "./mainComponents/Result";
+import { useState } from "react";
 
 const Main = () => {
-    return ( 
-        <main className="h-screen flex flex-col justify-around items-center">
-            <Title />
-            <Form />
+  const [dataIngress, SetDataIngress] = useState(0);
+  const [tempResult, setTempResult] = useState(0);
+  const [typeTemp, setTypeTemp] = useState("celsius");
 
-            
+  return (
+    <main className="h-screen flex flex-col justify-around items-center">
+      <Title type={typeTemp} setType={setTypeTemp} />
+      <FormMain
+        type={typeTemp}
+        ingress={dataIngress}
+        setIngress={SetDataIngress}
+        setTemp={setTempResult}
+      />
+      <Result type={typeTemp} ingress={dataIngress} temp={tempResult} />
+    </main>
+  );
+};
 
-        <h1> El "numero ingresado" en celsius es "este numero" en Fahrenheit</h1>
-        
-        </main>
-     );
-}
- 
 export default Main;
