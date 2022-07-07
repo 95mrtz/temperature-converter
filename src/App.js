@@ -8,7 +8,7 @@ const App = () => {
 
   const [ theme , setTheme ] = useState("dark")
   return(
-    <div className="w-full h-full bg-gradient-to-t from-gray-700 via-gray-900 to-black text-slate-200">
+    <div className="w-full h-full bg-gradient-to-b from-green-300 via-blue-500 to-purple-600 text-slate-200">
         <Header />
         <Main />
         <Footer />

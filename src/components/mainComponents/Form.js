@@ -1,5 +1,4 @@
-import Fahrenheit from "../../icon/Fahrenheit";
-import Celsius from "../../icon/Celsius";
+import { WiCelsius, WiFahrenheit } from "react-icons/wi";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -39,14 +38,13 @@ const FormMain = ({ type, ingress, setIngress, setTemp }) => {
       }}
       validationSchema={loginSchema}
       onSubmit={(values, actions) => {
-        alert(JSON.stringify(values, null, 2));
         setIngress(values.temperature);
         let res = handleConvertion(values.temperature, type);
         setTemp(res);
         actions.resetForm();
       }}
     >
-      <Form className="p-5 flex flex-col md:flex-row justify-around items-center">
+      <Form className="w-full p-5 flex flex-col md:flex-row justify-around items-center">
         <label htmlFor="temperature">
           Ingrese la temperatura en{" "}
           {type === "celsius" ? "Celsius" : "Fahrenheit"}
@@ -54,14 +52,14 @@ const FormMain = ({ type, ingress, setIngress, setTemp }) => {
         <Field
           type="number"
           placeholder="Ingrese un numero"
-          className="my-4 md:mx-4 p-4 rounded-lg w-full"
+          className="my-4 md:mx-4 p-4 rounded-lg w-full md:w-1/2 text-gray-800"
           id="temperature"
           name="temperature"
         />
-        <ErrorMessage component="a" name="temperature" />
-        <button type="submit" className="mx-4 p-4 rounded-lg bg-red-300">
+        <ErrorMessage component="a" name="temperature" className="mb-2" />
+        <button type="submit" className="mx-4 px-4 py-1 rounded-lg bg-purple-400 flex flex-row justify-center items-center">
           {" "}
-          convertir {type === "celsius" ? <Fahrenheit /> : <Celsius />}{" "}
+          convertir {type === "celsius" ? <WiFahrenheit size="50px" className="mx-2 font-extrabold" /> : <WiCelsius size="50px" className="mx-2 font-extrabold" />}{" "}
         </button>
       </Form>
     </Formik>
