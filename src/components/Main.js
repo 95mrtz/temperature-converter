@@ -9,7 +9,7 @@ const Main = () => {
   const [typeTemp, setTypeTemp] = useState("celsius");
 
   return (
-    <main className="h-screen flex flex-col justify-around items-center">
+    <main className="h-5/6 flex flex-col justify-around items-center">
       <Title type={typeTemp} setType={setTypeTemp} />
       <FormMain
         type={typeTemp}
