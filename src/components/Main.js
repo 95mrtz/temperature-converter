@@ -1,6 +1,7 @@
 import Title from "./mainComponents/Title";
 import FormMain from "./mainComponents/Form.js";
 import Resultado from "./mainComponents/Resultado";
+import History from "./mainComponents/History"
 import { useState } from "react";
 
 const Main = () => {
@@ -18,6 +19,7 @@ const Main = () => {
         setTemp={setTempResult}
       />
       <Resultado temp={tempResult} />
+      <History />
     </main>
   );
 };
