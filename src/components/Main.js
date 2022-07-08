@@ -1,6 +1,6 @@
 import Title from "./mainComponents/Title";
 import FormMain from "./mainComponents/Form.js";
-import Result from "./mainComponents/Result";
+import Resultado from "./mainComponents/Resultado";
 import { useState } from "react";
 
 const Main = () => {
@@ -17,7 +17,7 @@ const Main = () => {
         setIngress={SetDataIngress}
         setTemp={setTempResult}
       />
-      <Result type={typeTemp} ingress={dataIngress} temp={tempResult} />
+      <Resultado temp={tempResult} />
     </main>
   );
 };
