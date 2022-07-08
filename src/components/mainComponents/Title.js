@@ -6,7 +6,7 @@ const Title = ({ type, setType }) => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center my-5">
+    <section className="flex flex-col justify-center items-center my-1 sm:my-5">
       <h1 className="text-2xl sm:text-3xl md:text-4xl	mb-2">
         {" "}
         {type === "celsius"
