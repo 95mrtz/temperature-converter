@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="w-full h-screen bg-gradient-to-b from-green-300 via-blue-500 to-purple-600 text-slate-200">
+    <div className="w-full mi-h-full h-screen flex flex-col justify-between bg-gradient-to-b from-green-300 via-blue-500 to-purple-600 text-slate-200">
       <Header />
       <Main />
       <Footer />

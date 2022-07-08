@@ -7,7 +7,7 @@ const Title = ({ type, setType }) => {
 
   return (
     <section className="flex flex-col justify-center items-center my-5">
-      <h1 className="text-4xl	mb-2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl	mb-2">
         {" "}
         {type === "celsius"
           ? "Celsius a Fahrenheit"
@@ -15,7 +15,7 @@ const Title = ({ type, setType }) => {
       </h1>
       <button
         onClick={handleInvertir}
-        className="bg-purple-400 px-6 py-5 text-lg rounded-xl flex flex-row"
+        className="bg-purple-400 px-2 sm:px-6 py-3 sm:py-5 text-lg rounded-xl flex flex-row"
       >
         <p className="flex flex-row justify-center items-center">
           Invertir <FaExchangeAlt className="mx-2" />

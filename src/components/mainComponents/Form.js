@@ -24,27 +24,27 @@ const FormMain = ({ type, ingress, setIngress, setTemp }) => {
       }}
     >
       <Form className="w-full p-5 flex flex-col justify-around items-center">
-        <label htmlFor="temperature" className="text-xl">
+        <label htmlFor="temperature" className="text-lg sm:text-xl">
           Ingrese la temperatura en{" "}
           {type === "celsius" ? "Celsius" : "Fahrenheit"}
         </label>
         <Field
           type="number"
           placeholder="Ingrese un numero"
-          className="my-4 md:mx-4 p-4 rounded-lg w-full md:w-1/2 text-gray-800"
+          className="my-4 md:mx-4 p-2 sm:p-4 rounded-lg w-full md:w-1/2 text-gray-800"
           id="temperature"
           name="temperature"
         />
         <ErrorMessage component="a" name="temperature" className="mb-2" />
         <button
           type="submit"
-          className="mx-4 px-4 py-1 rounded-lg bg-purple-400 flex flex-row justify-center items-center"
+          className="px-2 sm:px-4 py-1 rounded-lg bg-purple-400 flex flex-row justify-center items-center"
         >
           <p className="text-lg font-bold"> convertir a</p>
           {type === "celsius" ? (
-            <WiFahrenheit size="50px" className="mx-1" />
+            <WiFahrenheit size={36} className="mx-1" />
           ) : (
-            <WiCelsius size="50px" className="mx-1" />
+            <WiCelsius size={36} className="mx-1" />
           )}{" "}
         </button>
       </Form>
