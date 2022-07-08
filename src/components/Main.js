@@ -1,7 +1,7 @@
 import Title from "./mainComponents/Title";
 import FormMain from "./mainComponents/Form.js";
 import Resultado from "./mainComponents/Resultado";
-import History from "./mainComponents/History"
+import History from "./mainComponents/History.js"
 import { useState } from "react";
 
 const Main = () => {
